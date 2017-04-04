@@ -1,0 +1,30 @@
+// --------------------------------------------------
+// SCSS Index
+// --------------------------------------------------
+
+@import "scss/reset";
+@import "scss/breakpoints";
+
+// --------------------------------------------------
+// Header & Footer navigation
+// --------------------------------------------------
+@import "scss/nav/_nav.xs";
+@import "scss/nav/_nav.md";
+@import "scss/nav/_nav.lg";
+@import "scss/nav/_nav.xl";
+
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	height: 5000px;
+}
+
+.footer {
+	padding-top: 100px;
+	.nav {
+		&__list {
+			border-bottom-width: 0;
+			border-top: 1px solid #ccc;
+		}		
+	}
+}
