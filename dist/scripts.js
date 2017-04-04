@@ -85,36 +85,45 @@ module.exports = __webpack_require__.p + "index.html";
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 // copy index.html to dist folder
 __webpack_require__(1);
-
 __webpack_require__(0);
 
-console.log('Test');
+/*
+import {menu} from './menu-data.js';
+import {MenuDataService} from './services/menu-data-service.js';
+import {MenuPage} from './home-page.js';
+*/
 
-var View = function () {
-    function View() {
-        _classCallCheck(this, View);
+var App = exports.App = function () {
+    function App() {
+        //super('UI Test');
+        //this.dataService = new MenuDataService();
+        //this.dataService.loadData(menu);  
 
-        alert('Appsasas');
+        _classCallCheck(this, App);
     }
 
-    _createClass(View, [{
+    _createClass(App, [{
         key: 'renderTest',
         value: function renderTest() {
-            alert('Appsasas');
+            alert('Render Test.');
         }
     }]);
 
-    return View;
+    return App;
 }();
 
-var App = new View();
-App.renderTest();
+var application = exports.application = new App();
+application.renderTest();
 
 /***/ })
 /******/ ]);

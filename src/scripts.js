@@ -1,21 +1,25 @@
 // copy index.html to dist folder
 require('file-loader?name=[name].[ext]!../src/index.html');
-
 require('./style.scss');
 
-console.log('Test');
+/*
+import {menu} from './menu-data.js';
+import {MenuDataService} from './services/menu-data-service.js';
+import {MenuPage} from './home-page.js';
+*/
 
-class View {
-    
+export class App {    
     constructor() {
-        alert('Appsasas');
+        //super('UI Test');
+        //this.dataService = new MenuDataService();
+        //this.dataService.loadData(menu);  
     }
 
     renderTest(){
-    	alert('Appsasas');
+    	alert('Render Test.');
     }
-    
+
 }
 
-var App = new View();
-App.renderTest();
+export let application = new App();
+application.renderTest();
