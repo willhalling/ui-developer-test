@@ -113,9 +113,23 @@ var App = exports.App = function () {
     }
 
     _createClass(App, [{
-        key: 'renderTest',
-        value: function renderTest() {
-            alert('Render Test.');
+        key: 'init',
+        value: function init() {
+            this.bindEvents();
+        }
+    }, {
+        key: 'bindEvents',
+        value: function bindEvents() {
+
+            document.getElementById("mobileHeaderLink").addEventListener("click", function (event) {
+                event.preventDefault();
+                this.classList.toggle("header__mobile--active");
+            });
+
+            document.getElementById("footerHeaderLink").addEventListener("click", function (event) {
+                event.preventDefault();
+                this.classList.toggle("footer__mobile--active");
+            });
         }
     }]);
 
@@ -123,7 +137,7 @@ var App = exports.App = function () {
 }();
 
 var application = exports.application = new App();
-application.renderTest();
+application.init();
 
 /***/ })
 /******/ ]);

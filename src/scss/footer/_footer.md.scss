@@ -1,0 +1,45 @@
+@media (min-width: #{map-get($grid-breakpoints, 'md')}) {
+
+	.footer {
+		
+		width: 100%;
+		padding: 0 0 5rem;
+
+		&__list {
+			list-style: none;
+			display: flex;
+			width: 100%;
+			justify-content: center;
+			border-top: 1px solid #ccc;
+		    margin: 0 0 1.5rem 0;
+		    max-height: none;
+		}
+
+		&__item {
+			flex-grow: 1;
+			flex-shrink: 1;
+			flex-basis: auto;
+			text-align: center;
+			a {
+			    display: block;
+			    padding: 1rem 0;
+			    text-decoration: none;
+			    border-right: 1px solid #ccc;
+			    &:hover {
+			    	background-color: #000;
+			    };
+			}
+			&:last-child {
+				a {
+					border-width: 0;
+				}
+		    }
+		}
+
+		// hide button on tablet plus
+		&__button {
+			display: none;
+		}
+	}
+
+}

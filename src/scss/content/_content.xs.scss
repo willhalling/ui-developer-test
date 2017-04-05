@@ -1,0 +1,20 @@
+@media (min-width: #{map-get($grid-breakpoints, 'xs')}) {
+
+	.content {
+		padding: 1.5rem;
+
+		h3 {
+			font-weight: bold;
+		}
+
+		.text {
+	
+			&__column {
+				margin-bottom: 3rem;
+			}
+
+		}
+
+	}
+}
+

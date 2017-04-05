@@ -1,0 +1,23 @@
+@media (min-width: #{map-get($grid-breakpoints, 'md')}) {
+
+	.content {
+		
+		padding: 0rem;
+
+		.text {
+			
+			display: flex;
+			justify-content: space-between;
+
+			&__column {
+				flex: 1;
+				width: 33.3%;
+				padding: 0 1.5rem;
+			}
+
+		}
+
+
+	}
+
+}
