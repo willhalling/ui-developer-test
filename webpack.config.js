@@ -1,6 +1,7 @@
 //var debug = process.env.NODE_ENV !== "production";
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 // https://gist.github.com/learncodeacademy/25092d8f1daf5e4a6fd3
 
@@ -27,10 +28,20 @@ module.exports = {
           query: {
             presets: ['es2015']
           }
+        },
+        {
+          test: /\.(jpe?g|png|gif|svg)$/i,
+          loaders: [
+              'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
+              'image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false'
+          ]
         }
       ]
   },
   plugins: [
-    new ExtractTextPlugin('./style.css')
+    new ExtractTextPlugin('./style.css'),
+    new CopyWebpackPlugin([
+      { from: './src/images', to: './images' }
+    ]),   
   ]
 };
