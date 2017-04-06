@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -73,13 +73,9 @@
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "index.html";
-
-/***/ }),
-/* 2 */
+/* 1 */,
+/* 2 */,
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -94,7 +90,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 // copy index.html to dist folder
-__webpack_require__(1);
+__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"file-loader?name=[name].[ext]!../src/javascript-coding.html\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 __webpack_require__(0);
 
 /*

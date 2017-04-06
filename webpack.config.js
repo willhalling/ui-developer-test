@@ -5,12 +5,16 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 // https://gist.github.com/learncodeacademy/25092d8f1daf5e4a6fd3
 
+
 module.exports = {
   context: __dirname,
-  entry: "./src/scripts.js",
+  entry: {
+      ['coding-responsively']: "./src/coding-responsively.js",
+      ['javascript-coding']: "./src/javascript-coding.js"
+  },
   output: {
-    path: __dirname + "/dist",
-    filename: "scripts.js"
+      path: __dirname + "/dist",
+      filename: "[name].js"
   },
   module: {
       rules: [

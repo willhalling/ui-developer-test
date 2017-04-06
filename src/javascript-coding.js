@@ -1,5 +1,5 @@
 // copy index.html to dist folder
-require('file-loader?name=[name].[ext]!../src/index.html');
+require('file-loader?name=[name].[ext]!../src/javascript-coding.html');
 require('./style.scss');
 
 /*
