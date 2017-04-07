@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -78,6 +78,13 @@
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
+module.exports = __webpack_require__.p + "javascript-coding.html";
+
+/***/ }),
+/* 4 */,
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
 "use strict";
 
 
@@ -90,7 +97,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 // copy index.html to dist folder
-__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"file-loader?name=[name].[ext]!../src/javascript-coding.html\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+__webpack_require__(3);
 __webpack_require__(0);
 
 /*

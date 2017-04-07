@@ -42,6 +42,11 @@ module.exports = {
         }
       ]
   },
+  devServer: {
+    contentBase: __dirname + "dist",
+    compress: true,
+    port: 9000
+  },
   plugins: [
     new ExtractTextPlugin('./style.css'),
     new CopyWebpackPlugin([
