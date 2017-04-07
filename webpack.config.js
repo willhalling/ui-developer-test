@@ -9,8 +9,8 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   context: __dirname,
   entry: {
-      ['coding-responsively']: "./src/coding-responsively.js",
-      ['javascript-coding']: "./src/javascript-coding.js"
+      ['coding-responsively']: "./src/scripts/coding-responsively.js",
+      ['javascript-coding']: "./src/scripts/javascript-coding.js"
   },
   output: {
       path: __dirname + "/dist",
@@ -50,7 +50,8 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin('./style.css'),
     new CopyWebpackPlugin([
-      { from: './src/images', to: './images' }
+      { from: './src/images', to: './images' },
+      { from: './src/data', to: './data' }
     ]),   
   ]
 };

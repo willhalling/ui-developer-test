@@ -63,26 +63,26 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 1 */,
-/* 2 */,
-/* 3 */
+
+/***/ 12:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "javascript-coding.html";
 
 /***/ }),
-/* 4 */,
-/* 5 */
+
+/***/ 2:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -96,43 +96,37 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-// copy index.html to dist folder
-__webpack_require__(3);
+__webpack_require__(12);
 __webpack_require__(0);
 
-/*
-import {menu} from './menu-data.js';
-import {MenuDataService} from './services/menu-data-service.js';
-import {MenuPage} from './home-page.js';
-*/
+//import {MenuDataService} from './menu-data-service.js';
+
+var dataUrl = './data/menu.json';
 
 var App = exports.App = function () {
     function App() {
-        //super('UI Test');
-        //this.dataService = new MenuDataService();
-        //this.dataService.loadData(menu);  
-
         _classCallCheck(this, App);
+
+        this.dataUrl = './data/menu.json';
     }
 
     _createClass(App, [{
         key: 'init',
         value: function init() {
-            this.bindEvents();
+            this.loadData(this.dataUrl);
         }
     }, {
-        key: 'bindEvents',
-        value: function bindEvents() {
-
-            document.getElementById("mobileHeaderLink").addEventListener("click", function (event) {
-                event.preventDefault();
-                this.classList.toggle("header__mobile--active");
-            });
-
-            document.getElementById("footerHeaderLink").addEventListener("click", function (event) {
-                event.preventDefault();
-                this.classList.toggle("footer__mobile--active");
-            });
+        key: 'loadData',
+        value: function loadData(url) {
+            var httpRequest = new XMLHttpRequest();
+            httpRequest.open('GET', url);
+            httpRequest.send();
+            httpRequest.onreadystatechange = function () {
+                if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+                    var httpResult = JSON.parse(httpRequest.responseText);
+                    console.log(httpResult);
+                }
+            };
         }
     }]);
 
@@ -143,4 +137,5 @@ var application = exports.application = new App();
 application.init();
 
 /***/ })
-/******/ ]);
+
+/******/ });

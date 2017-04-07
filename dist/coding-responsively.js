@@ -102,22 +102,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 // copy index.html to dist folder
 __webpack_require__(2);
-
 __webpack_require__(1);
 __webpack_require__(0);
 
-/*
-import {menu} from './menu-data.js';
-import {MenuDataService} from './services/menu-data-service.js';
-import {MenuPage} from './home-page.js';
-*/
-
 var App = exports.App = function () {
     function App() {
-        //super('UI Test');
-        //this.dataService = new MenuDataService();
-        //this.dataService.loadData(menu);  
-
         _classCallCheck(this, App);
     }
 

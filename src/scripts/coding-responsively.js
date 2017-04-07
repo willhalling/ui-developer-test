@@ -1,21 +1,9 @@
 // copy index.html to dist folder
-require('file-loader?name=[name].[ext]!../src/index.html');
-
-require('file-loader?name=[name].[ext]!../src/coding-responsively.html');
-require('./style.scss');
-
-/*
-import {menu} from './menu-data.js';
-import {MenuDataService} from './services/menu-data-service.js';
-import {MenuPage} from './home-page.js';
-*/
+require('file-loader?name=[name].[ext]!../../src/index.html');
+require('file-loader?name=[name].[ext]!../../src/coding-responsively.html');
+require('../style.scss');
 
 export class App {    
-    constructor() {
-        //super('UI Test');
-        //this.dataService = new MenuDataService();
-        //this.dataService.loadData(menu);  
-    }
 
     init(){
     	this.bindEvents();
