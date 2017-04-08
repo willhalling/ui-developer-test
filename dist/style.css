@@ -273,12 +273,37 @@ table {
       padding: 1rem;
       display: block;
       border: 1px solid #ccc;
-      border-bottom-width: 0; }
+      border-bottom-width: 0;
+      position: relative; }
       .menu__link:hover {
         background-color: #000;
         color: #fff; }
+      .menu__link--active {
+        background-color: #000; }
+        .menu__link--active + ul {
+          display: block !important; }
+    .menu__hasChild:after {
+      content: '\203A';
+      font-size: 2.250em;
+      position: absolute;
+      top: 4px;
+      right: 10px;
+      transition: all 0.3s ease;
+      transform-origin: 50% 50%; }
+    .menu__hasChild.menu__link--active:after {
+      transform: rotate(90deg); }
     .menu__item:last-child a {
-      border-bottom-width: 1px; } }
+      border-bottom-width: 1px; }
+    .menu__list .menu__list {
+      background-color: #000;
+      display: none; }
+      .menu__list .menu__list .menu__link {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+        border-top-width: 0;
+        border-bottom-width: 0; }
+      .menu__list .menu__list .menu__item:last-child a {
+        padding-bottom: 1rem; } }
 
 html, .javascript-coding {
   background-color: #333; }

@@ -108,21 +108,42 @@ var MenuDataService = exports.MenuDataService = function () {
             this.menuData = this.filterMenuByLast(data);
             var newData = this.menuData;
 
+            var menu = document.createElement("ul");
+            menu.className = 'menu__list';
+
             for (var i = 0; i < newData.length; i++) {
+
+                var hasChildMenu = newData[i].menu !== null ? true : false;
 
                 var menuElement = document.createElement('li');
                 menuElement.className = 'menu__item' + (newData[i].cssClass ? ' ' + newData[i].cssClass : '');
                 menuElement.id = newData[i].id;
-                element.appendChild(menuElement);
+                menu.appendChild(menuElement);
+                element.appendChild(menu);
 
                 var menuLink = document.createElement('a');
                 menuLink.setAttribute('href', '#');
                 menuLink.setAttribute('title', newData[i].description);
-                menuLink.className = 'menu__link';
+                menuLink.className = 'menu__link' + (hasChildMenu ? ' menu__hasChild' : '');
                 menuLink.innerHTML = newData[i].description;
 
                 menuElement.appendChild(menuLink);
+
+                // create child menu (if any)
+                if (hasChildMenu) {
+                    this.createMenu(newData[i].menu, document.getElementById(menuElement.id));
+                    this.createEventListener(menuLink);
+                }
             }
+        }
+    }, {
+        key: 'createEventListener',
+        value: function createEventListener(element) {
+
+            element.addEventListener('click', function (event) {
+                event.preventDefault();
+                this.classList.toggle("menu__link--active");
+            });
         }
     }]);
 
@@ -184,7 +205,7 @@ var App = exports.App = function () {
                     var httpResult = JSON.parse(httpRequest.responseText);
                     console.log(httpResult.menu);
                     this.dataService = new _menuDataService.MenuDataService();
-                    this.dataService.createMenu(httpResult.menu, document.getElementById("menu"));
+                    this.dataService.createMenu(httpResult.menu, document.getElementById("menuContainer"));
                 }
             };
         }

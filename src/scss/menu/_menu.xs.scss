@@ -12,16 +12,62 @@
 			display: block;
 			border: 1px solid #ccc;
 			border-bottom-width: 0;
+			position: relative;
 			&:hover {
 				background-color: #000;
 				color: #fff;
 			};
+			&--active {
+				background-color: #000;
+				+ ul {
+					display: block !important;
+				}
+			}
 		}
 		
+		&__hasChild {
+			&:after {
+				content:'\203A';
+				font-size: 2.250em;
+				position: absolute;
+			    top: 4px;
+			    right: 10px;
+				transition: all 0.3s ease;
+				transform-origin: 50% 50%;
+			};
+			&.menu__link--active {
+				&:after {
+					transform: rotate(90deg);
+				}
+			}
+
+		}
+
 		&__item {
 			&:last-child {
 				a {
 					border-bottom-width: 1px;
+				}
+			}
+		}
+
+		// child list
+		&__list {
+			.menu__list {
+				background-color: #000;
+				display: none;
+				.menu__link {
+					padding: 0.5rem 1rem;
+					font-size: 0.875rem;
+					border-top-width: 0;
+					border-bottom-width: 0;
+				}
+				.menu__item {
+					&:last-child {
+						a {
+							padding-bottom: 1rem;
+						}
+					}
 				}
 			}
 		}
