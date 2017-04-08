@@ -7,12 +7,24 @@
 	<link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 
-<body>
+<body class="javascript-coding">
 
-	<div id="menu"></div> 
+	<ul id="menu" class="menu"></ul> 
 
 	<script src="./javascript-coding.js"></script>
 
+	<script type="text/javascript">
+
+var data = [{ id: "One", last: false }, { id: "Two", last: true }, { id: "Three", last: false }, { id: "Four", last: false }, { id: "Five", last: false }];
+
+data.sort(function (a, b) {
+    return a.last - b.last;
+});
+
+console.log(data);
+
+
+	</script>
 </body>
 
 </html>

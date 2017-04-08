@@ -23,8 +23,14 @@
 @import "scss/content/_content.xs";
 @import "scss/content/_content.md";
 
+// --------------------------------------------------
+// Menu
+// --------------------------------------------------
+@import "scss/menu/_menu.xs";
+@import "scss/menu/_menu.md";
 
-html {
+
+html, .javascript-coding {
 	background-color: #333;
 }
 

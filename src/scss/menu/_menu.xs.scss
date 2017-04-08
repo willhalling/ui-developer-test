@@ -1,0 +1,31 @@
+@media (min-width: #{map-get($grid-breakpoints, 'xs')}) {
+
+	.menu {
+
+		padding: 1rem;
+		max-width: 300px;
+
+		&__link {
+			color: #ccc;
+			text-decoration: none;
+			padding: 1rem;
+			display: block;
+			border: 1px solid #ccc;
+			border-bottom-width: 0;
+			&:hover {
+				background-color: #000;
+				color: #fff;
+			};
+		}
+		
+		&__item {
+			&:last-child {
+				a {
+					border-bottom-width: 1px;
+				}
+			}
+		}
+
+	}
+}
+

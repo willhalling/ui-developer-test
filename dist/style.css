@@ -263,7 +263,24 @@ table {
       max-width: 31%;
       margin: 1%; } }
 
-html {
+@media (min-width: 0) {
+  .menu {
+    padding: 1rem;
+    max-width: 300px; }
+    .menu__link {
+      color: #ccc;
+      text-decoration: none;
+      padding: 1rem;
+      display: block;
+      border: 1px solid #ccc;
+      border-bottom-width: 0; }
+      .menu__link:hover {
+        background-color: #000;
+        color: #fff; }
+    .menu__item:last-child a {
+      border-bottom-width: 1px; } }
+
+html, .javascript-coding {
   background-color: #333; }
 
 body {
