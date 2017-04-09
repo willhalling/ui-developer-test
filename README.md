@@ -1,5 +1,5 @@
 # ui-developer-test
-Technical Test for William Hill.
+Technical Test.
 
 ## Installation
 
