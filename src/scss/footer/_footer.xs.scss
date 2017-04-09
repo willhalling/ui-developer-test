@@ -7,9 +7,7 @@
 
 		
 		&__list {
-			max-height: 0;
-			overflow: hidden;
-			transition: max-height 1s ease-in;
+			display: none;
 		}
 
 		&__item {
@@ -52,7 +50,7 @@
 				display: block;
 			}
 			& + ul { 
-			    max-height: 500px;
+			    display: block
 			}
 		}
 

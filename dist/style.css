@@ -142,9 +142,7 @@ table {
     background-color: #333;
     padding: 1.5rem; }
     .footer__list {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 1s ease-in; }
+      display: none; }
     .footer__item a {
       color: #CCC;
       width: 100%;
@@ -173,7 +171,7 @@ table {
     .footer__mobile--active .footer__hide {
       display: block; }
     .footer__mobile--active + ul {
-      max-height: 500px; } }
+      display: block; } }
 
 @media (min-width: 768px) {
   .footer {
@@ -237,17 +235,15 @@ table {
           background-color: #ffefd5;
           content: 'Featured';
           left: 0;
+          text-align: center;
+          line-height: 25px;
           width: 150px;
           height: 32px;
-          color: #000; }
-        .content .images__column--featured:after {
-          position: absolute;
-          top: 0;
-          z-index: 1;
-          content: "hi";
-          color: red;
-          width: 100px;
-          height: 100px; } }
+          color: #666;
+          letter-spacing: 1px;
+          font-size: 0.75rem;
+          text-transform: uppercase;
+          font-weight: bold; } }
 
 @media (min-width: 768px) {
   .content {
@@ -298,7 +294,7 @@ table {
       background-color: #000;
       display: none; }
       .menu__list .menu__list .menu__link {
-        padding: 0.5rem 1rem;
+        padding: 0.5rem 1rem 0.5rem 2rem;
         font-size: 0.875rem;
         border-top-width: 0;
         border-bottom-width: 0; }

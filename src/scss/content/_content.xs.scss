@@ -42,22 +42,19 @@
 			&__column--featured {
 				background-color: #ffefd5;
 				&:before {
-					position: absolute;
-					background-color: #ffefd5;
-					content: 'Featured';
-					left: 0;
-					width: 150px;
-					height: 32px;
-					color: #000;
-				};
-				&:after {
-					position: absolute;
-					top: 0;
-					z-index: 1;
-					content: "hi";
-					color: red;
-					width: 100px;
-					height: 100px;
+				    position: absolute;
+				    background-color: #ffefd5;
+				    content: 'Featured';
+				    left: 0;
+				    text-align: center;
+				    line-height: 25px;
+				    width: 150px;
+				    height: 32px;
+				    color: #666;
+				    letter-spacing: 1px;
+				    font-size: 0.75rem;
+				    text-transform: uppercase;
+				    font-weight: bold;
 				};
 			}
 
