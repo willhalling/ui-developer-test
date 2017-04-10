@@ -27,7 +27,7 @@ export class App {
                 const httpResult = JSON.parse(httpRequest.responseText);
                 console.log(httpResult.menu);
                 this.dataService = new MenuDataService();
-                this.dataService.createMenu(httpResult.menu, document.getElementById("menuContainer"));
+                this.dataService.createMenu(httpResult.menu, document.getElementById('menuContainer'));
             }
         };
     }

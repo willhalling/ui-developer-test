@@ -123,14 +123,14 @@ var App = exports.App = function () {
         key: 'bindEvents',
         value: function bindEvents() {
 
-            document.getElementById("mobileHeaderLink").addEventListener("click", function (event) {
+            document.getElementById('mobileHeaderLink').addEventListener('click', function (event) {
                 event.preventDefault();
-                this.classList.toggle("header__mobile--active");
+                this.classList.toggle('header__mobile--active');
             });
 
-            document.getElementById("footerHeaderLink").addEventListener("click", function (event) {
+            document.getElementById('footerHeaderLink').addEventListener('click', function (event) {
                 event.preventDefault();
-                this.classList.toggle("footer__mobile--active");
+                this.classList.toggle('footer__mobile--active');
             });
         }
     }]);
