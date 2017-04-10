@@ -11,7 +11,7 @@ Technical Test written in ECMAScript 6 and CSS (SCSS). [BEM](http://getbem.com/)
 * To keep loading times low I've used webpack to contain assets, including Javascript and CSS.
 * One CSS file used to keep HTTP requests at a minimum.
 * One JavaScript file used to keep HTTP requests at a minimum.
-* Used <picture> tag to load smaller images on mobile
+* Used picture tag to load smaller images on mobile
 * Could minify the files to further improve performance.
 
 
