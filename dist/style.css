@@ -153,7 +153,6 @@ table {
         color: #FFF; }
     .footer__button {
       color: #FFF;
-      font-style: 11px;
       text-transform: uppercase;
       border: 1px solid #FFF;
       border-radius: 3px;
@@ -165,13 +164,15 @@ table {
       text-decoration: none;
       text-align: center; }
     .footer__hide {
-      display: none; }
-    .footer__mobile--active .footer__show {
-      display: none; }
-    .footer__mobile--active .footer__hide {
-      display: block; }
-    .footer__mobile--active + ul {
-      display: block; } }
+      display: none; } }
+
+@media (max-width: 768px) {
+  .footer__mobile--active .footer__show {
+    display: none; }
+  .footer__mobile--active .footer__hide {
+    display: block; }
+  .footer__mobile--active + ul {
+    display: block; } }
 
 @media (min-width: 768px) {
   .footer {
