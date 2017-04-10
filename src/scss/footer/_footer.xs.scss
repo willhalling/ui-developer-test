@@ -25,7 +25,6 @@
 
 		&__button {
 			color: #FFF;
-			font-style: 11px;
 			text-transform: uppercase;
 			border: 1px solid #FFF;
 			border-radius: 3px;
@@ -41,6 +40,14 @@
 		&__hide {
 			display: none;
 		}
+
+	}
+
+}
+
+@media (max-width: #{map-get($grid-breakpoints, 'md')}) {
+
+	.footer {
 
 		&__mobile--active {
 			.footer__show {
