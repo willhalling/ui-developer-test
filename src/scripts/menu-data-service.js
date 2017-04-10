@@ -24,7 +24,7 @@ export class MenuDataService {
         this.menuData = this.filterMenuByLast(data);
         let newData = this.menuData;
         
-        const menu = document.createElement("ul");
+        const menu = document.createElement('ul');
         menu.className = `menu__list`;
 
         for (let i = 0; i < newData.length; i++) {

@@ -121,7 +121,7 @@ var MenuDataService = exports.MenuDataService = function () {
             this.menuData = this.filterMenuByLast(data);
             var newData = this.menuData;
 
-            var menu = document.createElement("ul");
+            var menu = document.createElement('ul');
             menu.className = 'menu__list';
 
             for (var i = 0; i < newData.length; i++) {
@@ -231,7 +231,7 @@ var App = exports.App = function () {
                     var httpResult = JSON.parse(httpRequest.responseText);
                     console.log(httpResult.menu);
                     this.dataService = new _menuDataService.MenuDataService();
-                    this.dataService.createMenu(httpResult.menu, document.getElementById("menuContainer"));
+                    this.dataService.createMenu(httpResult.menu, document.getElementById('menuContainer'));
                 }
             };
         }
