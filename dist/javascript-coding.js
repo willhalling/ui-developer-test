@@ -94,6 +94,12 @@ var MenuDataService = exports.MenuDataService = function () {
         this.menuData = [];
     }
 
+    /**
+     * Filters the data. Leaf items come last
+     * @param {object} data 
+     */
+
+
     _createClass(MenuDataService, [{
         key: 'filterMenuByLast',
         value: function filterMenuByLast(data) {
@@ -101,6 +107,13 @@ var MenuDataService = exports.MenuDataService = function () {
                 return a.leaf - b.leaf;
             });
         }
+
+        /**
+         * Creates the menu and child menu
+         * @param {object} data 
+         * @param {object} element
+         */
+
     }, {
         key: 'createMenu',
         value: function createMenu(data, element) {
@@ -136,6 +149,12 @@ var MenuDataService = exports.MenuDataService = function () {
                 }
             }
         }
+
+        /**
+         * Click listener for child menu
+         * @param {object} element
+         */
+
     }, {
         key: 'createEventListener',
         value: function createEventListener(element) {
@@ -173,12 +192,13 @@ exports.application = exports.App = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+__webpack_require__(4);
+
+__webpack_require__(0);
+
 var _menuDataService = __webpack_require__(1);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-__webpack_require__(4);
-__webpack_require__(0);
 
 var api = './data/menu.json';
 
@@ -194,6 +214,12 @@ var App = exports.App = function () {
         value: function init() {
             this.loadData(this.dataUrl);
         }
+
+        /**
+         * Instantiate the menu when the data is ready
+         * @param {string} url
+         */
+
     }, {
         key: 'loadData',
         value: function loadData(url) {

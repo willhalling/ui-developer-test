@@ -1,7 +1,7 @@
 // copy index.html to dist folder
-require('file-loader?name=[name].[ext]!../../src/index.html');
-require('file-loader?name=[name].[ext]!../../src/coding-responsively.html');
-require('../style.scss');
+import 'file-loader?name=[name].[ext]!../../src/index.html';
+import 'file-loader?name=[name].[ext]!../../src/coding-responsively.html';
+import '../style.scss';
 
 export class App {    
 
