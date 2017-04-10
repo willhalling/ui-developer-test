@@ -1,5 +1,5 @@
-require('file-loader?name=[name].[ext]!../../src/javascript-coding.html');
-require('../style.scss');
+import 'file-loader?name=[name].[ext]!../../src/javascript-coding.html';
+import '../style.scss';
 
 import {MenuDataService} from './menu-data-service.js';
 
@@ -14,6 +14,10 @@ export class App {
     	this.loadData(this.dataUrl);
     }
 
+    /**
+     * Instantiate the menu when the data is ready
+     * @param {string} url
+     */
     loadData(url){
         const httpRequest = new XMLHttpRequest();
         httpRequest.open('GET', url);

@@ -4,12 +4,21 @@ export class MenuDataService {
         this.menuData = [];
     }    
 
+    /**
+     * Filters the data. Leaf items come last
+     * @param {object} data 
+     */
     filterMenuByLast(data) {
         return data.sort((a, b) => {
             return a.leaf - b.leaf;
         });
     }
 
+    /**
+     * Creates the menu and child menu
+     * @param {object} data 
+     * @param {object} element
+     */
     createMenu(data, element) {
 
         this.menuData = this.filterMenuByLast(data);
@@ -45,6 +54,10 @@ export class MenuDataService {
 
     }
 
+    /**
+     * Click listener for child menu
+     * @param {object} element
+     */
     createEventListener(element){
 
         element.addEventListener('click', function(event) {
