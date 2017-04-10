@@ -63,7 +63,7 @@ table {
     z-index: 2;
     padding: 12px;
     width: 25px;
-    position: absolute;
+    position: fixed;
     top: 0;
     background-color: #000; }
     .header__mobile__line {
