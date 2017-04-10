@@ -1,0 +1,48 @@
+// --------------------------------------------------
+// Settings
+// --------------------------------------------------
+
+@import "scss/reset";
+@import "scss/breakpoints";
+
+// --------------------------------------------------
+// Header navigation
+// --------------------------------------------------
+@import "scss/header/_header.xs";
+@import "scss/header/_header.md";
+
+// --------------------------------------------------
+// Footer navigation
+// --------------------------------------------------
+@import "scss/footer/_footer.xs";
+@import "scss/footer/_footer.md";
+
+// --------------------------------------------------
+// Content
+// --------------------------------------------------
+@import "scss/content/_content.xs";
+@import "scss/content/_content.md";
+
+// --------------------------------------------------
+// Menu
+// --------------------------------------------------
+@import "scss/menu/_menu.xs";
+@import "scss/menu/_menu.md";
+
+
+html, .javascript-coding {
+	background-color: #333;
+}
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background-color: #ddd;
+}
+
+.content {
+	padding-top: 5rem;
+	color: #333; 
+	h3 {
+		padding-bottom: 1rem;
+	}
+}

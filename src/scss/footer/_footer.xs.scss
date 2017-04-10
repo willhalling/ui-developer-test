@@ -1,0 +1,60 @@
+@media (min-width: #{map-get($grid-breakpoints, 'xs')}) {
+	
+	.footer {
+
+		background-color: #333;
+		padding: 1.5rem;
+
+		
+		&__list {
+			display: none;
+		}
+
+		&__item {
+			a {
+				color: #CCC;
+				width: 100%;
+				display: block;
+				padding: 1rem 0;
+				text-align: center;
+			    &:hover {
+			    	color: #FFF;
+			    };
+			}
+		}
+
+		&__button {
+			color: #FFF;
+			font-style: 11px;
+			text-transform: uppercase;
+			border: 1px solid #FFF;
+			border-radius: 3px;
+			display: block;
+			padding: 1.5rem;
+			margin: 0 auto;
+			width: 100%;
+			box-sizing: border-box;
+			text-decoration: none;
+			text-align: center;
+		}
+
+		&__hide {
+			display: none;
+		}
+
+		&__mobile--active {
+			.footer__show {
+				display: none;
+			}
+			.footer__hide {
+				display: block;
+			}
+			& + ul { 
+			    display: block
+			}
+		}
+
+	}
+
+}
+

@@ -1,0 +1,65 @@
+@media (min-width: #{map-get($grid-breakpoints, 'xs')}) {
+
+	.content {
+		padding: 1.5rem;
+
+		h3 {
+			font-weight: bold;
+		}
+
+		.text {
+	
+			&__column {
+				margin-bottom: 3rem;
+			}
+
+		}
+
+		.images {
+			padding: .5vw;
+			margin: 0 0 3rem;
+			font-size: 0;
+			flex-flow: row wrap; 
+			display: flex;
+			background-color: #ddd;
+			
+			&__column { 
+				flex: auto; 
+				max-width: 100%; 
+
+				padding: 0.5rem;
+				margin-bottom: 1rem;
+				box-sizing: border-box;
+				background-color: #eee;
+				position: relative;
+				img {
+					width: 100%; 
+					height: auto;
+					align-items: center;
+				}
+			}
+
+			&__column--featured {
+				background-color: #ffefd5;
+				&:before {
+				    position: absolute;
+				    background-color: #ffefd5;
+				    content: 'Featured';
+				    left: 0;
+				    text-align: center;
+				    line-height: 25px;
+				    width: 150px;
+				    height: 32px;
+				    color: #666;
+				    letter-spacing: 1px;
+				    font-size: 0.75rem;
+				    text-transform: uppercase;
+				    font-weight: bold;
+				};
+			}
+
+		}
+
+	}
+}
+
